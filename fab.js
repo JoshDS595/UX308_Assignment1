@@ -50,7 +50,7 @@ document.querySelector("body").insertAdjacentHTML("beforeend", `
         right: 1em;
     }
     </style>
-    <button id="fab${suffix}">Tell me</button>
+    <button id="fab${suffix}">Order Takeout</button>
     `);
 
 document.querySelector(`#fab${suffix}`).addEventListener("click", evt=>{

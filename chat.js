@@ -3,7 +3,7 @@ import { handleInput } from "./Order.js"
 class Chat extends HTMLElement {
   sendMessage(evt) {
     evt.preventDefault();
-    var msg = this.input.value;
+    var msg = this.input.value || '';
     this.input.value = ''
     this.writeLine(msg)
   }
@@ -15,7 +15,7 @@ class Chat extends HTMLElement {
     this.messages.insertAdjacentHTML("beforeend", `<li class="message-item item-secondary">You say: ${text}</li>`);
     const aMessages = handleInput(text);
     for(let message of aMessages){
-      this.messages.insertAdjacentHTML("beforeend", `<li class="message-item item-primary">Bot says: ${message}</li>`);
+      this.messages.insertAdjacentHTML("beforeend", `<li class="message-item item-primary">${message}</li>`);
     }
     this.messages.scrollTop = this.messages.scrollHeight;
   }
