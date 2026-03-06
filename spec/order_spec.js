@@ -93,6 +93,7 @@ describe("Tests all stages of a takeout order", function () {
         handleInput("Cheese");
         
         handleInput("3"); // Shawarma
+        handleInput("medium"); // $9.99
         handleInput("Garlic Sauce");
         
         handleInput("4"); // Drink
